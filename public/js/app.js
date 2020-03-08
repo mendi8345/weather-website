@@ -10,7 +10,7 @@ console.log("loded app.js file")
 form.addEventListener("submit",(e)=>{
     e.preventDefault()
     var location = search.value
-    fetch("http://localhost:3000/weather?address="+location).then((response)=>{
+    fetch("/weather?address="+location).then((response)=>{
         
             response.json().then((data)=>{
                 if (data.erorr) {
